@@ -14,21 +14,49 @@
         }
         .glow {
             position: absolute;
-            width: 150px;
-            height: 150px;
+            width: 250px;
+            height: 250px;
             background: radial-gradient(circle, rgba(128, 0, 255, 0.6) 10%, rgba(128, 0, 255, 1) 50%, transparent 80%);
             border-radius: 50%;
             pointer-events: none;
             filter: blur(30px);
             transition: transform 0.05s linear;
+            z-index: -1;
         }
+        h1 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: rgb(0, 0, 0);
+    font-size: 2em;
+    text-transform: uppercase;
+}
+.m1{
+    position: absolute;
+    top: 45%;
+    left: 25%;
+}
+.m2{
+    position: absolute;
+    top: 45%;
+    right: 25%;
+}
+
     </style>
 </head>
 <body>
-    <div class="glow"></div>
+    <img class="m1"src="FnJiztjeqL.gif" alt="">
+    <h1>Welcome to my portfolio</h1>
+    <img class="m2" src="FnJiztjeqL.gif" alt="">
+    <div class="glow">
+      
+        </div>
+       
     <script>
         const glow = document.querySelector(".glow");
         document.addEventListener("mousemove", (e) => {
+          
             glow.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
         });
     </script>
